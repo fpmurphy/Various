@@ -1,0 +1,2 @@
+Running 'make' from this subdirectory builds the utility (../src/uefivars/uefivars)
+uefivars should be placed into /usr/sbin/.

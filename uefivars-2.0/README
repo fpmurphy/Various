@@ -1,0 +1,56 @@
+This is version 2.0 of uefivars, a Linux user-space utility  to display the 
+United Extensible Firmware Interface (UEFI) globally defined variables 
+known to the kernel. You must be root to run this utility. 
+
+The UEFI Specification is available from http://www.uefi.org.  See  
+Table 10 of the UEFI specification Version 2.3.1C for a full list of 
+the globally defined variables.
+ 
+Note: this version of uefivars requires that the kernel was booted using UEFI
+and the efivarfs filesystem is mounted.
+
+
+Typical usage:
+=============
+
+[root @ localhost]# uefivars
+Boot0000 (NV,BS,RT):* EFI USB Device	ACPI(a0841d0,0)PCI(1d,7)USB(2,0)
+Boot0001 (NV,BS,RT):* EFI DVD/CDROM	ACPI(a0841d0,0)PCI(1f,2)ATAPI(0,0,0)
+BootCurrent (BS,RT): 003D
+BootOptionSupport (BS,RT): 0303
+BootOrder (NV,BS,RT): 0000,0001
+ConIn (NV,BS,RT):
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(30341d0,0)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7f010400)
+/USBClass(ffff,ffff,3,1,1)
+ConInDev (BS,RT):
+/USBClass(ffff,ffff,3,1,1)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d3b419-2d9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4c7657e0-878e-9e2f-2808-83437f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4acf8bec-73a0-1dd0-e77e-2d887f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(30341d0,0)
+ConOut (NV,BS,RT):
+/ACPI(a0841d0,0)/PCI(0,1)/PCI(0,0)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7fff0400)
+ConOutDev (BS,RT):
+/ACPI(a0841d0,0)/PCI(0,1)/PCI(0,0)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d3b419-2d9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4c7657e0-878e-9e2f-2808-83437f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4acf8bec-73a0-1dd0-e77e-2d887fff0400)
+ErrOut (NV,BS,RT):
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7fff0400)
+ErrOutDev (BS,RT):
+/ACPI(a0841d0,0)/PCI(0,1)/PCI(0,0)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d2f9be-0c9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(11d3b419-2d9a-9000-273f-c14d7f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4c7657e0-878e-9e2f-2808-83437f010400)
+/ACPI(a0841d0,0)/PCI(0,1f)/ACPI(50141d0,1)/UART(115200,8,1,1)/Vendor(4acf8bec-73a0-1dd0-e77e-2d887fff0400)
+Lang (NV,BS,RT): eng
+LangCodes (BS,RT): eng,fra
+PlatformLang (NV,BS,RT): en-US
+PlatformLangCodes (BS,RT): en-US,fr-FR
+Timeout (NV,BS,RT): 3 secs
+
+Please direct any bugs, features, patches, etc. to Finnbarr P. Murphy <fpmATfpmurphy.com>.
